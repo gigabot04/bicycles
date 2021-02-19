@@ -1,7 +1,7 @@
 {
-  "name": "travel-to-Europe",
+  "name": "bicycles",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "Проект Акселиратора 1",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
