@@ -630,7 +630,8 @@ template {
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
-  color: #000000; }
+  color: #000000;
+  cursor: pointer; }
 
 .header__btn-menu {
   display: none;
