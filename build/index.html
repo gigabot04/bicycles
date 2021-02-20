@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Продажа велосипедов">
   <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font">
   <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
   <link rel="preload" href="fonts/OpenSans-Light.woff" as="font">
@@ -20,7 +21,7 @@
     <div class="wrapper">
       <button class="header__btn-menu" alt="Открыть меню"></button>
       <nav class="header__nav header__nav--nojs header__nav--active">
-        <a href="#">О нас</a>
+        <a href="#facts">О нас</a>
         <a href="#">Виды велосипедов</a>
         <a href="#">Видео про велосипеды</a>
         <a href="#">Контакты</a>
@@ -32,7 +33,8 @@
       </div>
       <div class="header__container">
         <div class="header__text">
-          <a alt="Лого сайта">
+          <a href="#" alt="Лого сайта">
+            <p class="visually-hidden">Лого сайта</p>
             <svg width="68" height="21">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -43,6 +45,7 @@
         <form class="header__form">
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <label>
+            <p class="visually-hidden">Ваше имя</p>
             <input id="header__input-name" type="text" placeholder="Введите Ваше Имя" required="" pattern="[A-Za-zА-Яа-яЁё\s]+$">
           </label>
           <label>
@@ -53,7 +56,7 @@
       </div>
     </div>
   </header>
-  <section class="facts">
+  <section class="facts" id="facts">
     <div class="wrapper">
       <h2>Несколько фактов о нас</h2>
       <ul class="facts__items">
