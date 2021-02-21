@@ -109,13 +109,11 @@
         position: absolute;
         top: 50%;
         right: 20px;
-        transform: translateX(-50%);
         width: 8px;
         height: 8px;
-        border-top: 2px solid rgba(#2C2E3F, 0.5);
-        border-right: 2px solid rgba(#2C2E3F, 0.5);
-        transform: rotate(45deg);
-        ;
+        border-top: 2px solid rgba($semi-black, 0.5);
+        border-right: 2px solid rgba($semi-black, 0.5);
+        transform: translateX(-50%) rotate(45deg);
       }
     }
   }
@@ -251,6 +249,7 @@
     color: $placeholder;
     opacity: 0.5;
   }
+
   @media (max-width: $tablet-width) {
     padding-left: 20px;
   }
@@ -300,6 +299,5 @@
 
   @media (max-width: $tablet-width) {
     display: block;
-
   }
 }

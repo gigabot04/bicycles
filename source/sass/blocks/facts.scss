@@ -51,7 +51,6 @@
   margin-bottom: 43px;
 
   &::before {
-    content: "";
     display: block;
     counter-increment: item1;
     content: "0" counter(item1);
