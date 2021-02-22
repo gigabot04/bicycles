@@ -91,8 +91,17 @@
   height: 65px;
   border: none;
   border-radius: 50%;
-  background-color: $sky;
+  background-color: $light-blue;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: rgba($light-blue, 0.8);
+  }
+
+  &:active {
+    background: rgba($light-blue, 0.4);
+  }
 
   &::after {
     content: "";
