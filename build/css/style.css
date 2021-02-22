@@ -403,6 +403,8 @@ template {
   letter-spacing: -0.005em;
   color: #ffffff;
   opacity: 0.7; }
+  .header__nav a:focus, .header__nav a:hover {
+    opacity: 1; }
 
 .header__nav {
   display: -webkit-box;
@@ -618,12 +620,18 @@ template {
     line-height: 24px;
     color: #1c1c1c;
     opacity: 0.5; }
+  .header__form input:hover, .header__form input:focus, .header__form input:active {
+    background-color: #ededed; }
   @media (max-width: 1023px) {
     .header__form input {
       padding-left: 20px; } }
   @media (max-width: 767px) {
     .header__form input {
       padding-left: 25px; } }
+
+@-moz-document url-prefix() {
+  .header__form input {
+    padding-top: 10px; } }
 
 .header__form button {
   width: 100%;
@@ -637,6 +645,10 @@ template {
   line-height: 21px;
   color: #000000;
   cursor: pointer; }
+  .header__form button:hover, .header__form button:focus {
+    background: rgba(10, 217, 198, 0.8); }
+  .header__form button:active {
+    background: rgba(10, 217, 198, 0.4); }
 
 .header__btn-menu {
   display: none;
@@ -670,7 +682,7 @@ template {
   @media (max-width: 1023px) {
     .footer {
       margin-top: 154px; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .footer {
       margin-top: 119px; } }
 
@@ -775,6 +787,10 @@ template {
   font-size: 16px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.5); }
+  .footer__contacts a:hover, .footer__contacts a:focus {
+    color: rgba(0, 0, 0, 0.8); }
+  .footer__contacts a:active {
+    color: rgba(0, 0, 0, 0.3); }
   .footer__contacts a::after {
     content: "";
     position: absolute;
@@ -786,24 +802,24 @@ template {
       text-align: center;
       width: 268px; } }
 
-.footer__contacts a[name="mail"]::after {
+.footer__contacts a[id="mail"]::after {
   top: -1px;
   left: -42px;
   width: 26px;
   height: 25px;
   background-image: url("../img/icon/mail.svg"); }
   @media (max-width: 767px) {
-    .footer__contacts a[name="mail"]::after {
+    .footer__contacts a[id="mail"]::after {
       left: -35px; } }
 
-.footer__contacts a[name="tel"]::after {
+.footer__contacts a[id="tel"]::after {
   top: -3px;
   left: -39px;
   width: 26px;
   height: 25px;
   background-image: url("../img/icon/phone.svg"); }
   @media (max-width: 767px) {
-    .footer__contacts a[name="tel"]::after {
+    .footer__contacts a[id="tel"]::after {
       left: -8px; } }
 
 .facts {
@@ -1009,10 +1025,12 @@ template {
     .type__item p {
       margin-top: 20px; } }
 
-@media (max-width: 1023px) {
-  .type__img {
-    width: 270px;
-    height: 300px; } }
+.type__img {
+  width: 342px; }
+  @media (max-width: 1023px) {
+    .type__img {
+      width: 270px;
+      height: 300px; } }
 
 .type__img img {
   width: 100%;
@@ -1039,7 +1057,7 @@ template {
   margin: 0 auto; }
   @media (max-width: 1023px) {
     .video__text {
-      max-width: 429px;
+      max-width: 441px;
       padding: 0 10px; } }
 
 .video__text h2 {
@@ -1106,6 +1124,10 @@ template {
   border-radius: 50%;
   background-color: #0ad9c6;
   cursor: pointer; }
+  .video__btn:hover, .video__btn:focus {
+    background: rgba(10, 217, 198, 0.8); }
+  .video__btn:active {
+    background: rgba(10, 217, 198, 0.4); }
   .video__btn::after {
     content: "";
     position: absolute;
@@ -1124,7 +1146,7 @@ template {
       .video__btn::after {
         width: 18px;
         height: 25px; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .video__btn {
       width: 65px;
       height: 65px; }
