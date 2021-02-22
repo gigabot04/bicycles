@@ -430,8 +430,8 @@ template {
   @media (max-width: 1023px) {
     .header__nav {
       padding: 0;
-      padding-top: 50px;
-      padding-bottom: 20px;
+      padding-top: 100px;
+      padding-bottom: 10px;
       position: absolute;
       top: 0;
       left: 0;
@@ -445,9 +445,13 @@ template {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      z-index: 1; }
+      z-index: 1;
+      min-height: 100vh; }
       .header__nav--nojs {
-        position: relative; }
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
       .header__nav--active {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -463,7 +467,10 @@ template {
         width: 100%;
         background-color: #f6f6f6;
         margin-bottom: 30px;
-        padding: 5px 20px; }
+        padding: 16px;
+        opacity: 1; }
+        .header__nav a:focus, .header__nav a:hover {
+          color: rgba(72, 73, 77, 0.5); }
         .header__nav a::after {
           content: "";
           position: absolute;
@@ -593,31 +600,26 @@ template {
   .header__form input::-webkit-input-placeholder {
     font-weight: normal;
     font-size: 15px;
-    line-height: 24px;
     color: #1c1c1c;
     opacity: 0.5; }
   .header__form input::-moz-placeholder {
     font-weight: normal;
     font-size: 15px;
-    line-height: 24px;
     color: #1c1c1c;
     opacity: 0.5; }
   .header__form input:-ms-input-placeholder {
     font-weight: normal;
     font-size: 15px;
-    line-height: 24px;
     color: #1c1c1c;
     opacity: 0.5; }
   .header__form input::-ms-input-placeholder {
     font-weight: normal;
     font-size: 15px;
-    line-height: 24px;
     color: #1c1c1c;
     opacity: 0.5; }
   .header__form input::placeholder {
     font-weight: normal;
     font-size: 15px;
-    line-height: 24px;
     color: #1c1c1c;
     opacity: 0.5; }
   .header__form input:hover, .header__form input:focus, .header__form input:active {
@@ -628,10 +630,6 @@ template {
   @media (max-width: 767px) {
     .header__form input {
       padding-left: 25px; } }
-
-@-moz-document url-prefix() {
-  .header__form input {
-    padding-top: 10px; } }
 
 .header__form button {
   width: 100%;
@@ -675,7 +673,35 @@ template {
             box-shadow: 0 7px 0 0, 0 -7px 0 0; }
   @media (max-width: 1023px) {
     .header__btn-menu {
-      display: block; } }
+      display: block; }
+      .header__btn-menu--nojs {
+        display: none; } }
+  .header__btn-menu--active {
+    background-color: transparent; }
+    .header__btn-menu--active::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg);
+      width: 32px;
+      height: 1px;
+      background-color: rgba(20, 21, 23, 0.2);
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+    .header__btn-menu--active::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+              transform: translate(-50%, -50%) rotate(-45deg);
+      width: 32px;
+      height: 1px;
+      background-color: rgba(20, 21, 23, 0.2);
+      -webkit-box-shadow: none;
+              box-shadow: none; }
 
 .footer {
   margin-top: 251px; }
@@ -755,8 +781,7 @@ template {
      object-fit: cover; }
 
 .footer__contacts {
-  width: 531px;
-  padding-left: 25px;
+  width: 565px;
   min-height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -766,7 +791,8 @@ template {
   margin: 40px auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding-right: 17px; }
   @media (max-width: 1023px) {
     .footer__contacts {
       margin: 21px auto;
@@ -786,41 +812,25 @@ template {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .footer__contacts a:hover, .footer__contacts a:focus {
     color: rgba(0, 0, 0, 0.8); }
   .footer__contacts a:active {
     color: rgba(0, 0, 0, 0.3); }
-  .footer__contacts a::after {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center; }
   @media (max-width: 767px) {
     .footer__contacts a {
       margin-bottom: 25px;
       text-align: center;
       width: 268px; } }
 
-.footer__contacts a[id="mail"]::after {
-  top: -1px;
-  left: -42px;
-  width: 26px;
-  height: 25px;
-  background-image: url("../img/icon/mail.svg"); }
-  @media (max-width: 767px) {
-    .footer__contacts a[id="mail"]::after {
-      left: -35px; } }
-
-.footer__contacts a[id="tel"]::after {
-  top: -3px;
-  left: -39px;
-  width: 26px;
-  height: 25px;
-  background-image: url("../img/icon/phone.svg"); }
-  @media (max-width: 767px) {
-    .footer__contacts a[id="tel"]::after {
-      left: -8px; } }
+.footer__contacts svg {
+  margin-right: 15px; }
 
 .facts {
   margin-top: 390px;
