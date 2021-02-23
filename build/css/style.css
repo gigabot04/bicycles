@@ -46,6 +46,9 @@
 body {
   font-family: "OpenSans", "Arial", sans-serif; }
 
+.body--js {
+  position: fixed; }
+
 a {
   text-decoration: none; }
 
@@ -432,12 +435,9 @@ template {
       padding: 0;
       padding-top: 100px;
       padding-bottom: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: none;
-      right: 0;
-      background-color: #ffffff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
@@ -445,17 +445,10 @@ template {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      z-index: 1;
-      min-height: 100vh; }
-      .header__nav--nojs {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
-      .header__nav--active {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      width: 100%; }
       .header__nav::after {
         content: none; }
       .header__nav a {
@@ -482,6 +475,23 @@ template {
           border-right: 2px solid rgba(44, 46, 63, 0.5);
           -webkit-transform: translateX(-50%) rotate(45deg);
                   transform: translateX(-50%) rotate(45deg); } }
+
+@media (max-width: 1023px) {
+  .header__nav-wrapper {
+    overflow-y: auto;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: #ffffff;
+    right: 0;
+    z-index: 1; }
+    .header__nav-wrapper--active {
+      display: block; }
+    .header__nav-wrapper--nojs {
+      position: relative;
+      display: block; } }
 
 .header__container {
   display: -webkit-box;
@@ -677,7 +687,7 @@ template {
       .header__btn-menu--nojs {
         display: none; } }
   .header__btn-menu--active {
-    background-color: transparent; }
+    background-color: #ffffff; }
     .header__btn-menu--active::after {
       content: "";
       position: absolute;
