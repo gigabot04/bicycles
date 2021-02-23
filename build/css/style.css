@@ -47,7 +47,7 @@ body {
   font-family: "OpenSans", "Arial", sans-serif; }
 
 .body--js {
-  position: fixed; }
+  overflow: hidden; }
 
 a {
   text-decoration: none; }
