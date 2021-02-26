@@ -35,7 +35,7 @@
       </div>
       <div class="header__container">
         <div class="header__text">
-          <a href="#" aria-label="Лого сайта">
+          <a aria-label="Лого сайта">
             <p class="visually-hidden">Лого сайта</p>
             <svg width="68" height="21">
               <use xlink:href="img/sprite.svg#logo"></use>
@@ -51,7 +51,7 @@
             <input id="header__input-name" type="text" placeholder="Введите Ваше Имя" required pattern="[A-Za-zА-Яа-яЁё\s]+$">
           </label>
           <label>
-            <input id="header__input-tel" type="tel" placeholder="Введите Ваш номер телефона" required pattern="[0-9]{11}" title="ПРИМЕР: 89997774455">
+            <input id="header__input-tel" type="tel" placeholder="Введите Ваш номер телефона" required pattern="[+0-9]{11,12}" title="ПРИМЕР: 89997774455">
           </label>
           <button type="submit">Подобрать велосипед мечты</button>
         </form>

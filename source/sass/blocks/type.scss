@@ -78,7 +78,7 @@
     }
   }
 
-  &:nth-child(2n) {
+  &:nth-child(3n + 2) {
     margin-top: 29px;
 
     &::after {

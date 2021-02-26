@@ -21,6 +21,7 @@
   z-index: -1;
   height: 825px;
   overflow: hidden;
+  background-color: $bg-bike;
 
   @media (max-width: $tablet-width) {
     height: 340px;
@@ -46,6 +47,7 @@
   letter-spacing: -0.005em;
   color: $white;
   opacity: 0.7;
+  margin: 0 20px;
 
   &:focus,
   &:hover {
@@ -57,8 +59,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 14.5em;
   padding-top: 21px;
+  width: 969px;
+  margin: 0 auto;
   position: relative;
 
   &::after {
@@ -67,7 +70,7 @@
     bottom: -9px;
     left: 50%;
     transform: translateX(-50%);
-    width: 61%;
+    width: 874px;
     height: 1px;
     background-color: rgba($white, 0.2);
   }

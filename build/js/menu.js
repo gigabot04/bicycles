@@ -10,7 +10,7 @@
     headerMenu.classList.toggle(`header__nav-wrapper--active`);
     body.classList.toggle(`body--js`);
     headerMenuBtn.classList.toggle(`header__btn-menu--active`);
-  }
+  };
 
   headerMenuBtn.addEventListener(`click`, () => {
     openCloseMenu();
